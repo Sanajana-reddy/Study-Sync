@@ -1,0 +1,24 @@
+package com.studysync.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
+public class CreateRoomRequest {
+    @NotBlank
+    @Size(max = 100)
+    private String name;
+
+    public CreateRoomRequest() {}
+
+    public CreateRoomRequest(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
